@@ -1,0 +1,52 @@
+{
+  "name": "@nycopportunity/wk",
+  "version": "0.0.1",
+  "title": "Build with NYC",
+  "description": "A dynamic CMS with content managed via GitHub",
+  "author": "The Mayor's Office for Economic Opportunity",
+  "license": "GPL-3.0",
+  "private": true,
+  "homepage": "https://nycopportunity.github.io/wk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nycopportunity/wk"
+  },
+  "bugs": {
+    "url": "https://github.com/nycopportunity/wk/issues"
+  },
+  "cdn": {
+    "base": {
+      "raw": "https://raw.githubusercontent.com/nycopportunity/wk/",
+      "source": "https://github.com/nycopportunity/wk/tree/"
+    },
+    "content": {
+      "drafts": "drafts",
+      "published": "content"
+    }
+  },
+  "main": "npm start",
+  "scripts": {
+    "published:dev": "cross-env NODE_ENV=development CONTENT=published pttrn -np -nl -s",
+    "published:prod": "cross-env NODE_ENV=production CONTENT=published pttrn -np -nl -s",
+    "drafts:dev": "cross-env NODE_ENV=development CONTENT=drafts pttrn -np -nl -s",
+    "drafts:prod": "cross-env NODE_ENV=production CONTENT=drafts pttrn -np -nl -s",
+    "development": "npm run published:dev && npm run drafts:dev",
+    "production": "npm run published:prod && npm run drafts:prod",
+    "start": "npm run drafts:dev && cross-env NODE_ENV=development CONTENT=drafts PORT=7070 concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
+    "ghpages": "npm run production && cross-env NODE_ENV=production pttrn publish",
+    "purge": "curl -X POST https://purge.jsdelivr.net/gh/nycopportunity/wk@content"
+  },
+  "devDependencies": {
+    "@nycopportunity/pttrn": "^1.4.6",
+    "@nycopportunity/pttrn-plugin-feather": "^1.0.2",
+    "@nycopportunity/pttrn-plugin-twig": "^1.0.2",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "@nycopportunity/patterns": "^2.6.15",
+    "@nycopportunity/pttrn-scripts": "^1.0.1",
+    "@socketsupply/tonic": "^14.1.5",
+    "showdown": "^2.1.0"
+  }
+}

@@ -1,0 +1,15 @@
+<div class="flex items-center color-light-background border border-green bg-green-30t p-2" role="alert">
+  <div class="pie-2">
+    <svg aria-hidden="true" class="icon-ui mie-1">
+      <use xlink:href="#feather-info"></use>
+    </svg>
+  </div>
+
+  <div>
+    <h2 class="h5">Draft Mode</h2>
+
+    <div class="o-content">
+      <p>This site is being served from the <b>{{ package.cdn.content.drafts }}/</b> directory. Content is pulling from the <a href="{{ package.cdn.base.source ~ package.cdn.content.drafts }}" target="_blank">{{ package.cdn.content.drafts }} content branch</a>. For <b>content managers</b>; to view live content <a href="{{ global.baseUrl }}">click this link</a>. For <b>developers</b>; to view live content restart with the <code>npm run published</code> script.</p>
+    </div>
+  </div>
+</div>
