@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  {# <link rel="shortcut icon" href="{{ package.homepage }}/img/favicon.svg"> #}
+
+  <title>{% if page_title %}{{ page_title }} | {% endif %}{{ package.title }}</title>
+  <meta property="og:title" content="{% if page_title %}{{ page_title }} | {% endif %}{{ package.title }}"/>
+  <meta property="og:type" content="website"/>
+
+  <meta property="og:description" content="{% if page_description %}{% else %}{{ package.description }}{% endif %}"/>
+  <meta name="description" content="{% if page_description %}{% else %}{{ package.description }}{% endif %}"/>
+
+  {# <meta property="og:image" content="{{ package.homepage }}/images/social.png"/>
+  <meta property="og:image:alt" content="{{ package.title }} by {{ package.author }}"/>
+  <meta name="twitter:image:alt" content="{{ package.title }} by {{ package.author }}"/>
+  <meta name="twitter:card" content="summary_large_image"/> #}
+
+  <link href="{{ global.entry.styles|replace({'scss': 'css'}) }}" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js" integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw==" crossorigin="anonymous"></script>
+
+  {% if process.env.NODE_ENV == 'development' %}
+  <meta name="robots" content="noindex,nofollow">
+  {% endif %}
+</head>
