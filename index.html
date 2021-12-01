@@ -57,14 +57,12 @@
                     <use xlink:href="#icon-logo-nyc"></use>
                   </svg>
                   <div aria-hidden="true">
-                    <b class="whitespace-nowrap block tablet:inline desktop:block">Benefits Platform</b>
-                    <span class="px-1 hidden tablet:inline desktop:hidden">|</span>
-                    <span class="whitespace-nowrap block tablet:inline desktop:block">Screening API</span>
+                    <b class="whitespace-nowrap block tablet:inline desktop:block">Fork this CMS</b>
                   </div>
                 </h2>
               </div>
               <div class="desktop:py-2 desktop:pis-7 desktop:mis-7 desktop:border-is border-blue">
-                <p class="text-h4 mb-2">Screen clients for <b>benefits at scale</b> or create <b>new benefits screening tools</b>. Send household composition data to eligibility rules for <b>35+</b> City, State, and Federal programs including SNAP, Cash Assistance, WIC, HEAP, and more.</b>
+                <p class="text-h4 mb-2">Create a new documentation site with content managed via GitHub. Developers can use the <a href="https://github.com/CityOfNewYork/patterns-cli">Patterns CLI</a> to customize templates styled with the <a href="https://nycopatterns.cityofnewyork.us/">NYC Opportunity Common Agency Patterns</a>.</b>
                 <p class="text-center desktop:text-start pt-2">
                   <a class="btn btn-primary btn-large inline-block" href="getting-started">Get started</a>
                   <br>
@@ -72,60 +70,6 @@
                   <span class="text-h6">or <a href="overview">read the overview to learn more</a>.</span>
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="color-light-background py-8">
-      <div class="layout-wrap mx-auto px-4 py-8">
-        <div class="mobile:grid mobile:grid-cols-2 mobile:gap-3">
-          <div class="mb-4">
-            <h2>Request</h2>
-            <pre class="m-0" tabindex="0">[{
-  "household": [{
-    "cashOnHand": "50000",
-    "livingRentalType": "RentControlled",
-    "livingRenting": "true",
-    "livingOwner": "false",
-    "livingStayingWithFriend": "false",
-    "livingHotel": "false",
-    "livingShelter": "false",
-    "livingPreferNotToSay": "false"
-  }],
-  "person": [{
-    "age": "35",
-    "incomes": [
-      {
-        ...</pre>
-          </div>
-          <div class="mb-4">
-            <h2>Response</h2>
-            <pre class="m-0" tabindex="0">{
-  "type": "SUCCESS",
-  "eligiblePrograms": [
-    {
-      "code": "S2R007",
-      "name": "Supplemental Nutrition Assistance Program"
-    },
-    {
-      "code": "S2R019",
-      "name": "Home Energy Assistance Program"
-    },
-    {
-      "code": "S2R013",
-      "name": "Section 8 / Housing Choice Voucher Program"
-    },
-    ...</pre>
-          </div>
-        </div>
-        <div class="layout-content">
-          <div class="mx-auto">
-            <div class="text-h5">
-              <p>The Screening API allows you to utilize the rules engine that governs the <a href="https://access.nyc.gov/eligibility/" target="_blank">ACCESS NYC Eligibility Screener</a>. When household data is sent to the Screening API, it will return a response that contains program names and codes. These program codes can be used to cross-reference additional content from the <b>Benefits and Programs Dataset</b>. These are the same tools that <b>ACCESS NYC</b> and <b>Growing Up NYC</b> use to provide content and eligibility information for health and human services.</p>
-              <p class="text-center">
-                <a class="btn btn-primary inline-block" href="overview">Read the overview to learn more</a>
-              </p>
             </div>
           </div>
         </div>
