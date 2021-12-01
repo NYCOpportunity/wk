@@ -1,0 +1,126 @@
+[
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Data"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/agency-general-counsel",
+        "label": "Agency General Counsel"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/data-curator-and-scientist",
+        "label": "Data Curator and Scientist"
+      },
+      {
+        "type": "section",
+        "label": "Fellowships and Apprenticeships:"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/data-fellow",
+        "label": "Data Fellow"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Equity NYC"
+      },
+      {
+        "type": "section",
+        "label": "No open positions currently"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "The Service Design Studio"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/design-lead",
+        "label": "Design Lead"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Product"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/policy-content-analyst",
+        "label": "Policy Content Analyst"
+      },
+      {
+        "type": "section",
+        "label": "Fellowships and Apprenticeships:"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/user-interface-ui-design-fellow",
+        "label": "User Interface (UI) Design Fellow"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Programs and Evaluation"
+      },
+      {
+        "type": "section",
+        "label": "No open positions currently"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Technology"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/technical-manager",
+        "label": "Technical Manager"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Poverty Research Unit"
+      },
+      {
+        "type": "section",
+        "label": "No open positions currently"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Administration, Finance, Strategy and Operations"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/administrative-coordinator",
+        "label": "Administrative Coordinator"
+      }
+    ]
+  }
+]
