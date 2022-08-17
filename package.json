@@ -1,23 +1,23 @@
 {
-  "name": "@nycopportunity/fork-this-cms",
+  "name": "@nycopportunity/static-cms",
   "version": "0.0.2",
-  "title": "Fork This CMS",
+  "title": "Static CMS",
   "description": "A dynamic CMS with content managed via GitHub",
   "author": "The Mayor's Office for Economic Opportunity",
   "license": "GPL-3.0",
   "private": true,
-  "homepage": "https://nycopportunity.github.io/fork-this-cms",
+  "homepage": "https://nycopportunity.github.io/static-cms",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nycopportunity/fork-this-cms"
+    "url": "https://github.com/nycopportunity/static-cms"
   },
   "bugs": {
-    "url": "https://github.com/nycopportunity/fork-this-cms/issues"
+    "url": "https://github.com/nycopportunity/static-cms/issues"
   },
   "cdn": {
     "base": {
-      "raw": "https://raw.githubusercontent.com/nycopportunity/fork-this-cms/",
-      "source": "https://github.com/nycopportunity/fork-this-cms/tree/"
+      "raw": "https://raw.githubusercontent.com/nycopportunity/static-cms/",
+      "source": "https://github.com/nycopportunity/static-cms/tree/"
     },
     "content": {
       "development": "drafts",
@@ -32,7 +32,7 @@
     "start": "npm run build:drafts && cross-env NODE_ENV=development PORT=7070 concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
     "production": "npm run build:published && cross-env NODE_ENV=production PORT=7070 concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
     "ghpages": "npm run build:published && cross-env NODE_ENV=production pttrn publish",
-    "purge": "curl -X POST https://purge.jsdelivr.net/gh/nycopportunity/fork-this-cms@content"
+    "purge": "curl -X POST https://purge.jsdelivr.net/gh/nycopportunity/static-cms@content"
   },
   "devDependencies": {
     "@nycopportunity/pttrn": "^1.0.3",

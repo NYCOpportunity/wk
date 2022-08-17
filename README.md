@@ -1,12 +1,12 @@
-# Fork This CMS
+# Static CMS
 
-A static documentation site that can be forked and updated for any project.
+A static documentation site that can be forked and updated for any project. Examples include the [NYC Benefits Platform, Benefits Screening API documentation](https://screeningapidocs.cityofnewyork.us).
 
-## Updating the Static Site Front-end
+## Updating the static site front-end
 
 The site source is written in JavaScript (ES Module format), Dart Sass, and Twig templates. The source is compiled by the Patterns CLI ([more details below](#patterns-cli)) with some custom commands and configuration.
 
-### Getting Started
+### Getting started
 
 1. Fork this repository. A public facing repository is required for the CMS to pull content from.
 
@@ -68,11 +68,11 @@ Then run the `ghpages` npm script build in production mode and then deploy to th
 $ npm run ghpages
 ```
 
-## Content Management
+## Content management
 
 The content is managed in the `content` branch using Markdown files. To edit these files and move them from draft to published follow these instructions;
 
-### Drafting Content
+### Drafting content
 
 Content is drafted in the `drafts` branch.
 
@@ -86,7 +86,7 @@ Content is drafted in the `drafts` branch.
 
 You can now view drafted changes in the site in the [drafts](/drafts) directory on the public site.
 
-### Creating a Pull Request for Review
+### Creating a pull request for review
 
 When you are done drafting changes create a new pull request to stage changes from the `drafts` branch to the `content` branch.
 
@@ -98,7 +98,7 @@ When you are done drafting changes create a new pull request to stage changes fr
 
 1. Click **Create pull request** again in the next view to make the pull request.
 
-### Publishing Content
+### Publishing content
 
 Once the pull request is approved changes are ready to be published. Click **Merge pull request**. The content will be live.
 
