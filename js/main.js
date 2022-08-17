@@ -493,8 +493,8 @@
           return el;
         });
 
-      let wt = this.webtrends(key, d);
-      let ga = this.gtag(key, d);
+      this.webtrends(key, d);
+      this.gtag(key, d);
       /* eslint-enable no-console */
 
       return d;
@@ -508,8 +508,8 @@
      * @param  {Collection}  data  The data to track
      */
     view(app, key, data) {
-      let wt = this.webtrends(key, data);
-      let ga = this.gtagView(app, key);
+      this.webtrends(key, data);
+      this.gtagView(app, key);
       /* eslint-enable no-console */
     };
 
@@ -628,7 +628,7 @@
     'gtag'
   ];
 
-  const CMS = `${"https://raw.githubusercontent.com/nycopportunity/fork-this-cms/"}${"content"}`;
+  const CMS = `${"https://raw.githubusercontent.com/nycopportunity/static-cms/"}${"content"}`;
 
   new Icons('https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.8/dist/svg/icons.svg');
   new Icons('svg/feather.svg');
@@ -662,4 +662,4 @@
     }
   });
 
-}());
+})();
