@@ -1028,7 +1028,7 @@
      * @return  {String}        Rendered element
      */
     link(item) {
-      return this.html`<a class="${this.props.classes.link}" tabindex="${this.props.tabindexes}" href="${item.href}">
+      return this.html`<a class="${this.props.classes.link}" tabindex="${this.props.tabindexes}" href="${"https://nycopportunity.github.io/wk"}${item.href}">
       ${item.label}
     </a>`;
     }
