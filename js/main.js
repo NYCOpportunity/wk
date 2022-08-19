@@ -1115,10 +1115,9 @@
       const hash = window.location.hash;
 
       if (hash && hash.startsWith('#/')) {
-        let PAGE = hash.replace('#/', '');
-        let DIRECTORY = window.location.pathname;
+        let rawContent = window.location.href.replace("https://nycopportunity.github.io/wk", CMS).replace('#/', '');
 
-        let request = new Request(`${CMS}${DIRECTORY}${PAGE}.md`);
+        let request = new Request(`${rawContent}.md`);
         let response = await fetch(request);
 
         if (response.status === 200) {
