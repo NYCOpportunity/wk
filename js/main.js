@@ -1114,10 +1114,8 @@
     try {
       const hash = window.location.hash;
 
-      console.dir(`${"https://nycopportunity.github.io/wk"}/#/`);
-
-      if (hash && hash.startsWith(`${"https://nycopportunity.github.io/wk"}/#/`)) {
-        let PAGE = hash.replace(`${"https://nycopportunity.github.io/wk"}/#/`, '');
+      if (hash && hash.startsWith('#/')) {
+        let PAGE = hash.replace('#/', '');
         let DIRECTORY = window.location.pathname;
 
         let request = new Request(`${CMS}${DIRECTORY}${PAGE}.md`);
