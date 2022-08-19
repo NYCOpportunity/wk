@@ -5,42 +5,32 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Static CMS</title>
-  <meta property="og:title" content="Static CMS" />
+  <title>Build with NYC</title>
+  <meta property="og:title" content="Build with NYC" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="A dynamic CMS with content managed via GitHub" />
   <meta name="description" content="A dynamic CMS with content managed via GitHub" />
-  <link href="css/style.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js" integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw==" crossorigin="anonymous"></script>
+  <link href="https://nycopportunity.github.io/wk/css/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js" integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
   <a href="#main-content" class="sr-only">Skip to main content</a>
   <header class="overflow-hidden color-dark-background py-2">
     <div class="layout--wrap mx-auto px-4 flex justify-between items-center">
-      <h1 class="m-0 flex font-normal" style="font-size: 1em"> By <span class="hidden">The Mayor's Office for Economic Opportunity</span>
+      <h1 class="m-0 flex font-normal" style="font-size: 1em">
+        <span class="hidden">The Mayor's Office for Economic Opportunity</span>
         <svg aria-hidden="true" class="icon-logo-nyco mis-1" style="width: 140px; height: 22px;">
           <use xlink:href="#icon-logo-nyco-secondary"></use>
         </svg>
       </h1>
-      <button data-js="toggle" aria-pressed="false" aria-expanded="false" aria-controls="navigation" class="cursor-pointer underline font-bold">Menu</button>
+      <button data-js="toggle" aria-pressed="false" aria-expanded="false" aria-controls="navigation" class="cursor-pointer underline font-bold">View open positions</button>
     </div>
   </header>
   <aside id="navigation" class="color-mid-background hidden hidden:overflowFadeInUp animated">
     <div class="p-4 animated">
       <div class="layout-wrap screen-tablet:layout--two-columns-gutter justify-center mx-auto">
-        <div class="tablet:grid tablet:grid-cols-3 tablet:gap-3">
-          <nav class="pb-2">
-            <span class="block p-2 mb-1 text-h4 font-normal text-grey border-b border-grey-70t">Guide</span>
-            <a class="block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center" tabindex="-1" href="overview">Overview</a>
-            <a class="block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center" tabindex="-1" href="getting-started">
-              <span class="small font-normal mie-1">01</span> Getting Started
-            </a>
-            <a class="block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center" tabindex="-1" href="next-steps">
-              <span class="small font-normal mie-1">02</span> Next Steps
-            </a>
-          </nav>
-        </div>
+        <nyco-nav id="1961167034" class="tablet:grid tablet:grid-cols-2 tablet:gap-8" classes='{"nav":"pb-2","header":"block p-2 mb-1 text-h4 font-normal text-grey border-b border-grey-70t","link":"block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center","section":"block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center text-grey"}' tabindexes="-1"></nyco-nav>
       </div>
     </div>
   </aside>
@@ -52,19 +42,19 @@
             <div class="justify-center items-center mb-6 desktop:flex desktop:px-4">
               <div class="py-2 mobile:text-center desktop:text-start">
                 <h2 class="h1 font-default font-normal inline-block mb-3 desktop:m-0" style="line-height: 1em">
-                  <span class="sr-only">Static CMS</span>
+                  <span class="sr-only">Build with NYC</span>
+                  <div aria-hidden="true">
+                    <b class="whitespace-nowrap block tablet:inline desktop:block">Build With</b>
+                  </div>
                   <svg class="icon-logo-nyc mb-1" style="width: 258px; height: 84px" aria-hidden="true">
                     <use xlink:href="#icon-logo-nyc"></use>
                   </svg>
-                  <div aria-hidden="true">
-                    <b class="whitespace-nowrap block tablet:inline desktop:block">Static CMS</b>
-                  </div>
                 </h2>
               </div>
               <div class="desktop:py-2 desktop:pis-7 desktop:mis-7 desktop:border-is border-blue">
-                <p class="text-h4 mb-2">Create a new documentation site with content managed via GitHub. Developers can use the <a href="https://github.com/CityOfNewYork/patterns-cli">Patterns CLI</a> to customize templates styled with the <a href="https://nycopatterns.cityofnewyork.us/">NYC Opportunity Common Agency Patterns</a>.</b>
+                <p class="text-h2 mb-2">Put your <b>data</b>, <b>design</b>, <b>digital</b>, and <b>policy</b> skills to work to improve the lives of millions of New Yorkers.</b>
                 <p class="text-center desktop:text-start pt-2">
-                  <a class="btn btn-primary btn-large inline-block" href="getting-started">Get started</a>
+                  <a class="btn btn-primary btn-large inline-block" href="getting-started">View open positions</a>
                   <br>
                   <br>
                   <span class="text-h6">or <a href="overview">read the overview to learn more</a>.</span>
@@ -75,23 +65,27 @@
         </div>
       </div>
     </section>
+    <section class="color-light-background py-8">
+      <div class="layout-wrap mx-auto px-4 py-8">
+        <div class="layout-content">
+          <div class="mx-auto">
+            <div class="text-h5">
+              <p>At the <a href="http://nyc.gov/opportunity" target="_blank">Mayor's Office for Economic Opportunity</a> we work to improve the systems of government by advancing the use of research, data and design in program and policy development, service delivery, and budget decisions. Our work includes analyzing existing anti-poverty approaches, developing new strategies, facilitating the sharing of data across City agencies, and rigorously assessing the impact of key initiatives.</p>
+              <p>We are seeking candidates for design, data, research, policy, and technology roles to develop and support digital products and programs that reduce poverty and advance opportunity for City residents.</p>
+              <p class="text-center">
+                <a class="btn btn-primary inline-block" href="overview">Read the overview to learn more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="color-mid-background py-8">
       <div class="layout-wrap mx-auto px-8 py-8">
         <div class="text-center">
-          <h2 class="mt-0 mb-8">View the Documentation</h2>
+          <h2 class="mt-0 mb-8">Our open team positions</h2>
         </div>
-        <div class="tablet:grid tablet:grid-cols-3 tablet:gap-3">
-          <nav class="">
-            <span class="block p-2 mb-1 text-h4 font-normal text-grey border-b border-grey-70t">Guide</span>
-            <a class="block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center" href="overview">Overview</a>
-            <a class="block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center" href="getting-started">
-              <span class="small font-normal mie-1">01</span> Getting Started
-            </a>
-            <a class="block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center" href="next-steps">
-              <span class="small font-normal mie-1">02</span> Next Steps
-            </a>
-          </nav>
-        </div>
+        <nyco-nav id="1031191651" class="tablet:grid tablet:grid-cols-2 tablet:gap-4" classes='{"nav":"","header":"block p-2 mb-1 text-h4 font-normal text-grey border-b border-grey-70t","link":"block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center","section":"block p-2 text-h5 no-underline hover:bg-pink-50t flex items-center text-grey"}'></nyco-nav>
       </div>
     </section>
   </main>
@@ -108,9 +102,6 @@
         </div>
         <div class="pb-4 desktop:pl-4 desktop:flex justify-end items-center">
           <nav class="o-footer__inline-nav">
-            <a href="overview">Overview</a>
-            <a href="getting-started">Getting Started</a>
-            <a href="terms-of-service">Terms of Service</a>
           </nav>
         </div>
       </div>
@@ -121,14 +112,14 @@
           </p>
         </div>
         <div class="desktop:text-end">
-          <small> © City of New York, 2021 All Rights Reserved.
+          <small> © City of New York, 2022 All Rights Reserved.
             <br> NYC is a trademark and service mark of the City of New York.
           </small>
         </div>
       </div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="https://nycopportunity.github.io/wk/js/main.js"></script>
 </body>
 
 </html>
