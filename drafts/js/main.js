@@ -6089,7 +6089,7 @@
      * @return  {String}        Rendered element
      */
     link(item) {
-      return this.html`<a class="${this.props.classes.link}" tabindex="${this.props.tabindexes}" href="${"https://nycopportunity.github.io/wk"}${item.href}">
+      return this.html`<a class="${this.props.classes.link}" tabindex="${this.props.tabindexes}" href="${"https://nycopportunity.github.io/wk/drafts"}${item.href}">
       ${item.label}
     </a>`;
     }
@@ -6111,7 +6111,7 @@
   const CMS = `${"https://raw.githubusercontent.com/nycopportunity/wk/"}${"drafts"}`;
 
   new Icons('https://cdn.jsdelivr.net/gh/cityofnewyork/nyco-patterns@v2.6.8/dist/svg/icons.svg');
-  new Icons(`${"https://nycopportunity.github.io/wk"}/svg/feather.svg`);
+  new Icons(`${"https://nycopportunity.github.io/wk/drafts"}/svg/feather.svg`);
   new Toggle();
 
   Tonic.add(NycoNav);
@@ -6175,7 +6175,7 @@
       const hash = window.location.hash;
 
       if (hash && hash.startsWith('#/')) {
-        let rawContent = window.location.href.replace("https://nycopportunity.github.io/wk", CMS).replace('#/', '');
+        let rawContent = window.location.href.replace("https://nycopportunity.github.io/wk/drafts", CMS).replace('#/', '');
 
         let request = new Request(`${rawContent}.md`);
         let response = await fetch(request);
