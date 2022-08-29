@@ -6130,14 +6130,15 @@
       let elements = document.querySelectorAll(`[data-bind="${key}"]`);
 
       elements.forEach(element => {
-        // console.dir(element);
         if (element) element.innerHTML = meta[key];
       });
     });
 
-    md.innerHTML = html;
+    if (md) {
+      md.innerHTML = html;
 
-    window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
+    }
   };
 
   /**
@@ -6172,10 +6173,27 @@
    */
   const router = async () => {
     try {
-      const hash = window.location.hash;
+      /**
+       * General Page Routes
+       *
+       * @var {String}
+       */
+      let hash = window.location.hash;
+      let href = window.location.href;
 
+      /**
+       * Homepage Route
+       */
+      if (href === `${"https://nycopportunity.github.io/wk/drafts"}/` || href === `${"https://nycopportunity.github.io/wk/drafts"}/#` || href === `${"https://nycopportunity.github.io/wk/drafts"}/#/`) {
+        hash = '#/index';
+        href = `${window.location.href}/index`;
+      }
+
+      /**
+       * Process Route
+       */
       if (hash && hash.startsWith('#/')) {
-        let rawContent = window.location.href.replace("https://nycopportunity.github.io/wk/drafts", CMS).replace('#/', '');
+        let rawContent = href.replace("https://nycopportunity.github.io/wk/drafts", CMS).replace('#/', '');
 
         let request = new Request(`${rawContent}.md`);
         let response = await fetch(request);

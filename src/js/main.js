@@ -27,14 +27,15 @@ let refresh = (html, meta) => {
     let elements = document.querySelectorAll(`[data-bind="${key}"]`);
 
     elements.forEach(element => {
-      // console.dir(element);
       if (element) element.innerHTML = meta[key];
     });
   });
 
-  md.innerHTML = html;
+  if (md) {
+    md.innerHTML = html;
 
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
+  }
 };
 
 /**
@@ -69,10 +70,27 @@ const content = (data) => {
  */
 const router = async () => {
   try {
-    const hash = window.location.hash;
+    /**
+     * General Page Routes
+     *
+     * @var {String}
+     */
+    let hash = window.location.hash;
+    let href = window.location.href;
 
+    /**
+     * Homepage Route
+     */
+    if (href === `${BASE_URL}/` || href === `${BASE_URL}/#` || href === `${BASE_URL}/#/`) {
+      hash = '#/index';
+      href = `${window.location.href}/index`;
+    }
+
+    /**
+     * Process Route
+     */
     if (hash && hash.startsWith('#/')) {
-      let rawContent = window.location.href.replace(BASE_URL, CMS).replace('#/', '');
+      let rawContent = href.replace(BASE_URL, CMS).replace('#/', '');
 
       let request = new Request(`${rawContent}.md`);
       let response = await fetch(request);

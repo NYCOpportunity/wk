@@ -1,16 +1,33 @@
 const pkg = require('../package.json');
 
+/**
+ * Global configuration
+ *
+ * @type {Object}
+ */
 let remotes = {
   development: 'http://localhost:7070',
   production: 'https://nycopportunity.github.io/wk',
 };
+
+let dist = 'dist';
+let baseUrl = remotes[process.env.NODE_ENV];
+
+if (process.env.CONTENT === pkg.cdn.content.drafts) {
+  dist = `dist/${pkg.cdn.content.drafts}`;
+  baseUrl = `${remotes[process.env.NODE_ENV]}/${pkg.cdn.content.drafts}`;
+}
+
+if (process.env.NODE_ENV === 'development') {
+  baseUrl = `${remotes[process.env.NODE_ENV]}`;
+}
 
 /**
  * Global configuration
  *
  * @type {Object}
  */
-module.exports = {
+let global = {
   /**
    * Main project directories
    *
@@ -18,10 +35,8 @@ module.exports = {
    */
   base: process.env.PWD,
   src: 'src',
-  dist: (process.env.CONTENT === pkg.cdn.content.drafts)
-    ? `dist/${pkg.cdn.content.drafts}` : 'dist',
-  baseUrl: (process.env.CONTENT === pkg.cdn.content.drafts)
-    ? `${remotes[process.env.NODE_ENV]}/${pkg.cdn.content.drafts}` : remotes[process.env.NODE_ENV],
+  dist: dist,
+  baseUrl: baseUrl,
 
   /**
    * Project entry-points. These are used by other files to determine defaults.
@@ -39,3 +54,12 @@ module.exports = {
     svg: 'svg'
   }
 };
+
+// console.dir(global);
+
+/**
+ * Export
+ *
+ * @type {Object}
+ */
+module.exports = global;
