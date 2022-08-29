@@ -14,15 +14,6 @@
         "type": "link",
         "href": "/positions/#/data-curator-and-scientist",
         "label": "Data Curator and Scientist"
-      },
-      {
-        "type": "section",
-        "label": "Fellowships and Apprenticeships:"
-      },
-      {
-        "type": "link",
-        "href": "/positions/#/data-fellow",
-        "label": "Data Fellow"
       }
     ]
   },
@@ -61,10 +52,6 @@
         "type": "link",
         "href": "/positions/#/policy-content-analyst",
         "label": "Policy Content Analyst"
-      },
-      {
-        "type": "section",
-        "label": "Fellowships and Apprenticeships:"
       }
     ]
   },
@@ -115,6 +102,19 @@
         "type": "link",
         "href": "/positions/#/administrative-coordinator",
         "label": "Administrative Coordinator"
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "type": "header",
+        "label": "Fellowships & Apprenticeships"
+      },
+      {
+        "type": "link",
+        "href": "/positions/#/data-fellow",
+        "label": "Data Fellow"
       }
     ]
   }
