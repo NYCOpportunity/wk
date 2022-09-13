@@ -7,6 +7,6 @@
 
 <p class="text-h5">We are seeking candidates for design, data, research, policy, and technology roles to develop and support digital products and programs that reduce poverty and advance opportunity for City residents.</p>
 
-<p class="text-h5 text-center">
-  <a class="btn btn-large btn-primary inline-block" href="#/work">Learn more about our work</a>
+<p class="text-h5 my-4">
+  <a class="btn btn-large inline-block w-full" href="#/work">Learn more about our work</a>
 </p>
