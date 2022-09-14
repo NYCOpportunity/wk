@@ -6130,8 +6130,6 @@
       let elements = document.querySelectorAll(`[data-bind="${key}"]`);
 
       elements.forEach(element => {
-        // console.dir(element);
-
         if (element) element.innerHTML = meta[key];
       });
     });
@@ -6183,12 +6181,10 @@
       let hash = window.location.hash;
       let href = window.location.href;
 
-      // console.dir(window.location);
-
       /**
        * Homepage Route
        */
-      if (window.location.hash === '' && window.location.pathname == '/') {
+      if (href === `${"https://nycopportunity.github.io/wk/drafts"}/` || href === `${"https://nycopportunity.github.io/wk/drafts"}/#` || href === `${"https://nycopportunity.github.io/wk/drafts"}/#/`) {
         hash = '#/index';
         href = `${window.location.href}/index`;
       }
